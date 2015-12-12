@@ -635,3 +635,11 @@ Please follow the instructions there to make your enterprise visible on the Open
   price_graph: "Price graph"
   included_tax: "Included tax"
   remove_tax: "Remove tax"
+  admin_settings: "Settings"
+  update_invoice: "Update Invoices"
+  finalise_invoice: "Finalise Invoices"
+  finalise_user_invoice: "Finalize User Invoice"
+  finalise_user_invoice_explanation: "Use this button to finalize all invoices in the system for the previous calendar month. This task can be set up to run automatically once a month."
+  manually_run_task: "Manually Run Task "
+  update_user_invoice_explanation: "Use this button to immediately update invoices for the month to date for each enterprise user in the system. This task can be set up to run automatically every night."
+  finalize
