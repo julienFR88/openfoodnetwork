@@ -55,22 +55,23 @@
       - if @update_account_invoices_job
         %p.text-center
           - if @update_account_invoices_job.run_at < Time.now
-            %strong In Progress
+            %strong
+              =t :in_progress
             %br
-            Started at:
+              =t :started_at
           - else
-            %strong Queued
+            %strong 
+              =t :queued
             %br
-            Scheduled for:
+              =t :Scheduled_for
           = @update_account_invoices_job.run_at
       - else
         %p.explanation
-          =t :update_user_invoice_explanation
+          =t :update_user_invoice_explained
           
     .six.columns.omega.step.text-center
       .form-buttons{"data-hook" => "buttons"}
-        =link_to_with_icon "icon-ok-sign", 
-          =t :finalise_user_invoice ,
+        =link_to_with_icon "icon-ok-sign", t(:finalise_user_invoice ),
           main_app.start_job_admin_accounts_and_billing_settings_path(job: { name: "finalize_account_invoices" }),
           class: "button fullwidth"
 
@@ -79,15 +80,17 @@
       - if @finalize_account_invoices_job
         %p.text-center
           - if @finalize_account_invoices_job.run_at < Time.now
-            %strong In Progress
+            %strong  
+              =t :in_progress
             %br
-            Started at:
+              =t :started_at
           - else
-            %strong Queued
+            %strong 
+              =t :queued
             %br
-            Scheduled for:
+              =t :scheduled_for
           = @finalize_account_invoices_job.run_at
       - else
         %p.explanation
-          =t :finalize_user_invoice_explanation
+          =t :finalise_user_invoice_explained
           
